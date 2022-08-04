@@ -1,0 +1,21 @@
+/*4. Write a recursive function to calculate sum of squares of first n natural numbers*/
+
+#include<stdio.h>
+void sum(int n);// function prototype
+int main()
+{
+int n;
+printf("Enter the number :");
+scanf("%d",&n);
+sum(n); // function calling
+
+return 0;
+}
+void sum(int n){ // function defination
+    if(n==0){
+        return 0;
+    }
+    sum(n-1);
+    printf("%d\n",n*n);
+   
+}
