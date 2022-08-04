@@ -1,0 +1,20 @@
+/*3. Write a recursive function to calculate sum of first N even natural numbers*/
+
+#include<stdio.h>
+int sum(int n);// function prototype
+int main()
+{
+int n;
+printf("Enter the number :");
+scanf("%d",&n);
+printf("Your Sum of even natural number through recursion is %d",sum(n));
+
+return 0;
+}
+int sum(int n){ // function defination
+    if(n==0){
+        return 0;
+    }
+    return 2*n + sum(n-1);
+   
+}
