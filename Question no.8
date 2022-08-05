@@ -1,0 +1,30 @@
+/*8. Write a recursive function to print first N terms of Fibonacci series*/
+
+#include<stdio.h>
+int fibo(int n);// function prototype
+int main(){
+int n;
+printf("Enter how many terms you want to see :");
+scanf("%d",&n);
+printf("%d",fibo(n));
+return 0;
+}
+int fibo(int n){ // function defination
+    if(n==0){
+        return 0;
+    }
+    if(n==1){
+        return 1;
+    }
+    int recall1=fibo(n-1);
+    int recall2=fibo(n-2);
+    return recall1+recall2;
+    
+    
+}
+
+
+    
+    
+
+   
